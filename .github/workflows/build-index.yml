@@ -16,6 +16,10 @@ jobs:
   validate:
     name: Validate themes
     runs-on: ubuntu-latest
+    # Needed for the auto-commit step on push to main. Safe under default
+    # GITHUB_TOKEN; no PAT required.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
