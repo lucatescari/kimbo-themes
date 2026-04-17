@@ -20,6 +20,12 @@ const REQUIRED_COLORS = [
 const RAW_URL_BASE =
   "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes";
 
+// GitHub username rules: alphanumeric + single hyphens, cannot start/end
+// with a hyphen, max 39 chars. Enforced here so malicious themes can't slip
+// in a string that expands into a surprising URL via string interpolation
+// at the card's author link (e.g. "foo/../bar" or "//other.com").
+const GITHUB_USERNAME_RE = /^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$/;
+
 function validateTheme(slug, theme) {
   if (typeof theme.name !== "string" || theme.name.length === 0) {
     throw new Error(`${slug}: missing or empty string field 'name'`);
@@ -29,6 +35,12 @@ function validateTheme(slug, theme) {
   }
   if (typeof theme.author !== "string" || theme.author.length === 0) {
     throw new Error(`${slug}: missing or empty string field 'author' (GitHub username)`);
+  }
+  if (!GITHUB_USERNAME_RE.test(theme.author)) {
+    throw new Error(
+      `${slug}: field 'author' must be a valid GitHub username ` +
+        `(alphanumeric + hyphens, no leading/trailing hyphen, max 39 chars; got ${JSON.stringify(theme.author)})`,
+    );
   }
   if (typeof theme.version !== "string" || theme.version.length === 0) {
     throw new Error(`${slug}: missing or empty string field 'version'`);

@@ -112,4 +112,30 @@ const validTheme = (overrides = {}) => ({
   }
 }
 
+// Test 6: an author string that isn't a valid GitHub username is rejected.
+{
+  const root = setup();
+  try {
+    writeTheme(root, "sus", validTheme({ author: "foo/../bar" }));
+    assert.throws(() => buildIndex(root), /valid GitHub username/);
+    console.log("✓ test 6: invalid GitHub username is rejected");
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
+
+// Test 7: edge-case usernames (hyphens, max length) are accepted.
+{
+  const root = setup();
+  try {
+    writeTheme(root, "hyphen", validTheme({ author: "some-user-39" }));
+    writeTheme(root, "maxlen", validTheme({ author: "a".repeat(39) }));
+    const result = buildIndex(root);
+    assert.equal(result.themes.length, 2);
+    console.log("✓ test 7: hyphenated + max-length usernames accepted");
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
+
 console.log("\nAll tests passed.");
