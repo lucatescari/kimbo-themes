@@ -1,0 +1,33 @@
+{
+  "name": "Modern Darker",
+  "type": "dark",
+  "colors": {
+    "terminal.background": "#09090b",
+    "terminal.foreground": "#b0b0b8",
+    "terminal.cursor": "#5cc9f0",
+    "terminal.selectionBackground": "#1e2a40",
+    "terminal.ansiBlack": "#1a1a20",
+    "terminal.ansiRed": "#f04060",
+    "terminal.ansiGreen": "#7ec87e",
+    "terminal.ansiYellow": "#e0a060",
+    "terminal.ansiBlue": "#6e8eff",
+    "terminal.ansiMagenta": "#a78bfa",
+    "terminal.ansiCyan": "#5cc9f0",
+    "terminal.ansiWhite": "#b0b0b8",
+    "terminal.ansiBrightBlack": "#4a4a55",
+    "terminal.ansiBrightRed": "#ff6080",
+    "terminal.ansiBrightGreen": "#90e090",
+    "terminal.ansiBrightYellow": "#f0c080",
+    "terminal.ansiBrightBlue": "#8ea8ff",
+    "terminal.ansiBrightMagenta": "#c0a0ff",
+    "terminal.ansiBrightCyan": "#80ddff",
+    "terminal.ansiBrightWhite": "#d0d0d8",
+    "tab.activeBackground": "#09090b",
+    "tab.inactiveBackground": "#050507",
+    "tab.activeForeground": "#b0b0b8",
+    "tab.inactiveForeground": "#4a4a55",
+    "titleBar.background": "#050507",
+    "panel.border": "#1a1a20",
+    "panel.activeBorder": "#6e8eff"
+  }
+}
