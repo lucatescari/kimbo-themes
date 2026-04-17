@@ -1,6 +1,8 @@
 {
   "name": "Modern Darker",
   "type": "dark",
+  "author": "lucatescari",
+  "version": "1.0.0",
   "colors": {
     "terminal.background": "#09090b",
     "terminal.foreground": "#b0b0b8",

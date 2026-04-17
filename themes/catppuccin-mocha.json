@@ -1,6 +1,8 @@
 {
   "name": "Catppuccin Mocha",
   "type": "dark",
+  "author": "lucatescari",
+  "version": "1.0.0",
   "colors": {
     "terminal.background": "#1e1e2e",
     "terminal.foreground": "#cdd6f4",

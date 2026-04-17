@@ -1,6 +1,8 @@
 {
   "name": "Catppuccin Latte",
   "type": "light",
+  "author": "lucatescari",
+  "version": "1.0.0",
   "colors": {
     "terminal.background": "#eff1f5",
     "terminal.foreground": "#4c4f69",

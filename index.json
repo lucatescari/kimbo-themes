@@ -1,0 +1,47 @@
+{
+  "generated": "2026-04-17T15:35:38.096Z",
+  "themes": [
+    {
+      "slug": "catppuccin-latte",
+      "name": "Catppuccin Latte",
+      "type": "light",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#eff1f5",
+        "foreground": "#4c4f69",
+        "accent": "#1e66f5",
+        "cursor": "#dc8a78"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/catppuccin-latte.json"
+    },
+    {
+      "slug": "catppuccin-mocha",
+      "name": "Catppuccin Mocha",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#1e1e2e",
+        "foreground": "#cdd6f4",
+        "accent": "#89b4fa",
+        "cursor": "#f5e0dc"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/catppuccin-mocha.json"
+    },
+    {
+      "slug": "modern-darker",
+      "name": "Modern Darker",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#09090b",
+        "foreground": "#b0b0b8",
+        "accent": "#6e8eff",
+        "cursor": "#5cc9f0"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/modern-darker.json"
+    }
+  ]
+}

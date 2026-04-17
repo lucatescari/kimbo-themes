@@ -1,0 +1,41 @@
+name: Build index.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "themes/**"
+      - "scripts/build-index.mjs"
+      - ".github/workflows/build-index.yml"
+  pull_request:
+    paths:
+      - "themes/**"
+      - "scripts/build-index.mjs"
+
+jobs:
+  validate:
+    name: Validate themes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run tests
+        run: node scripts/build-index.test.mjs
+      - name: Build index (dry run)
+        run: |
+          node scripts/build-index.mjs
+          # On PRs, don't commit; just ensure it runs without error.
+      - name: Commit index.json (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet index.json; then
+            echo "index.json is already up to date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add index.json
+            git commit -m "chore: regenerate index.json"
+            git push
+          fi
