@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-17T16:21:54.253Z",
+  "generated": "2026-04-20T17:02:23.541Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -30,6 +30,48 @@
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/catppuccin-mocha.json"
     },
     {
+      "slug": "dracula",
+      "name": "Dracula",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#282a36",
+        "foreground": "#f8f8f2",
+        "accent": "#bd93f9",
+        "cursor": "#f8f8f2"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/dracula.json"
+    },
+    {
+      "slug": "gruvbox-dark",
+      "name": "Gruvbox Dark",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#282828",
+        "foreground": "#ebdbb2",
+        "accent": "#458588",
+        "cursor": "#ebdbb2"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-dark.json"
+    },
+    {
+      "slug": "gruvbox-light",
+      "name": "Gruvbox Light",
+      "type": "light",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#fbf1c7",
+        "foreground": "#3c3836",
+        "accent": "#458588",
+        "cursor": "#3c3836"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-light.json"
+    },
+    {
       "slug": "modern-darker",
       "name": "Modern Darker",
       "type": "dark",
@@ -42,6 +84,76 @@
         "cursor": "#5cc9f0"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/modern-darker.json"
+    },
+    {
+      "slug": "nord",
+      "name": "Nord",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#2e3440",
+        "foreground": "#d8dee9",
+        "accent": "#81a1c1",
+        "cursor": "#d8dee9"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/nord.json"
+    },
+    {
+      "slug": "rose-pine",
+      "name": "Rose Pine",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#191724",
+        "foreground": "#e0def4",
+        "accent": "#9ccfd8",
+        "cursor": "#e0def4"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/rose-pine.json"
+    },
+    {
+      "slug": "solarized-dark",
+      "name": "Solarized Dark",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#002b36",
+        "foreground": "#839496",
+        "accent": "#268bd2",
+        "cursor": "#93a1a1"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/solarized-dark.json"
+    },
+    {
+      "slug": "solarized-light",
+      "name": "Solarized Light",
+      "type": "light",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#fdf6e3",
+        "foreground": "#657b83",
+        "accent": "#268bd2",
+        "cursor": "#586e75"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/solarized-light.json"
+    },
+    {
+      "slug": "tokyo-night",
+      "name": "Tokyo Night",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#1a1b26",
+        "foreground": "#c0caf5",
+        "accent": "#7aa2f7",
+        "cursor": "#c0caf5"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/tokyo-night.json"
     }
   ]
 }
