@@ -1,0 +1,39 @@
+{
+  "name": "Claude Red",
+  "type": "dark",
+  "author": "RubenNunez",
+  "version": "1.0.0",
+  "colors": {
+    "terminal.background": "#111111",
+    "terminal.foreground": "#e8e6dc",
+    "terminal.cursor": "#d97757",
+    "terminal.selectionBackground": "#3a2a24",
+
+    "terminal.ansiBlack": "#141413",
+    "terminal.ansiRed": "#d97757",
+    "terminal.ansiGreen": "#788c5d",
+    "terminal.ansiYellow": "#d8a15b",
+    "terminal.ansiBlue": "#6a9bcc",
+    "terminal.ansiMagenta": "#c78672",
+    "terminal.ansiCyan": "#8fb7b5",
+    "terminal.ansiWhite": "#e8e6dc",
+
+    "terminal.ansiBrightBlack": "#6f6b64",
+    "terminal.ansiBrightRed": "#e08a6d",
+    "terminal.ansiBrightGreen": "#8ea070",
+    "terminal.ansiBrightYellow": "#e6b870",
+    "terminal.ansiBrightBlue": "#86add8",
+    "terminal.ansiBrightMagenta": "#d39a88",
+    "terminal.ansiBrightCyan": "#a8c9c7",
+    "terminal.ansiBrightWhite": "#faf9f5",
+
+    "tab.activeBackground": "#201d1a",
+    "tab.inactiveBackground": "#171614",
+    "tab.activeForeground": "#faf9f5",
+    "tab.inactiveForeground": "#b0aea5",
+
+    "titleBar.background": "#1b1a18",
+    "panel.border": "#2a2926",
+    "panel.activeBorder": "#d97757"
+  }
+}
