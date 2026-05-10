@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-24T08:13:20.361Z",
+  "generated": "2026-05-10T20:28:48.951Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -58,6 +58,34 @@
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/dracula.json"
     },
     {
+      "slug": "forest",
+      "name": "Forest",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#0e1a14",
+        "foreground": "#c8d4c0",
+        "accent": "#5fb39a",
+        "cursor": "#7fdca4"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/forest.json"
+    },
+    {
+      "slug": "github-light",
+      "name": "GitHub Light",
+      "type": "light",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#ffffff",
+        "foreground": "#1f2328",
+        "accent": "#0969da",
+        "cursor": "#1f2328"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/github-light.json"
+    },
+    {
       "slug": "gruvbox-dark",
       "name": "Gruvbox Dark",
       "type": "dark",
@@ -86,6 +114,20 @@
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-light.json"
     },
     {
+      "slug": "matrix",
+      "name": "Matrix",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#000800",
+        "foreground": "#00cc33",
+        "accent": "#00b88a",
+        "cursor": "#00ff41"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/matrix.json"
+    },
+    {
       "slug": "modern-darker",
       "name": "Modern Darker",
       "type": "dark",
@@ -112,6 +154,20 @@
         "cursor": "#d8dee9"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/nord.json"
+    },
+    {
+      "slug": "rose-pine-dawn",
+      "name": "Rosé Pine Dawn",
+      "type": "light",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#faf4ed",
+        "foreground": "#575279",
+        "accent": "#56949f",
+        "cursor": "#575279"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/rose-pine-dawn.json"
     },
     {
       "slug": "rose-pine",
