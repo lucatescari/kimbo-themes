@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-10T20:28:48.951Z",
+  "generated": "2026-06-03T15:12:41.212Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -112,6 +112,20 @@
         "cursor": "#3c3836"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-light.json"
+    },
+    {
+      "slug": "lightroot",
+      "name": "Lightroot",
+      "type": "dark",
+      "author": "pixlhero",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#222222",
+        "foreground": "#cccccc",
+        "accent": "#faf7dc",
+        "cursor": "#ffffff"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/lightroot.json"
     },
     {
       "slug": "matrix",
