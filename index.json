@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-03T15:12:41.212Z",
+  "generated": "2026-06-04T06:56:53.026Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -168,6 +168,20 @@
         "cursor": "#d8dee9"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/nord.json"
+    },
+    {
+      "slug": "princess",
+      "name": "Princess",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#1a0a1a",
+        "foreground": "#ffc0e0",
+        "accent": "#ff5caa",
+        "cursor": "#ff69b4"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/princess.json"
     },
     {
       "slug": "rose-pine-dawn",
