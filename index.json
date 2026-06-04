@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04T06:58:24.358Z",
+  "generated": "2026-06-04T07:51:11.387Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -56,6 +56,20 @@
         "cursor": "#f8f8f2"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/dracula.json"
+    },
+    {
+      "slug": "edict",
+      "name": "Edict",
+      "type": "dark",
+      "author": "lucatescari",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#08080f",
+        "foreground": "#c0c4cc",
+        "accent": "#2e4464",
+        "cursor": "#e8b830"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/edict.json"
     },
     {
       "slug": "forest",
