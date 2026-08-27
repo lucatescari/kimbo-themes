@@ -50,18 +50,23 @@ if (s > e) {
 // own. Assert the key set outside the generated block still matches the
 // contract exactly, in both directions, and fail loudly naming the offenders.
 //
-// The pattern below is deliberately a general "word.word" shape, not a
-// whitelist of the namespaces the contract happens to use today
+// The namespace half of the pattern is deliberately a general "word.word"
+// shape, not a whitelist of the namespaces the contract happens to use today
 // (terminal/tab/titleBar/panel). A whitelist would only ever flag keys that
 // already look like they belong to a known namespace, so a typo'd prefix, a
 // key copy-pasted from another project, or a wrong-case namespace would
 // silently fail to match and pass through as if nothing were wrong -
-// exactly the class of drift this check exists to catch. None of the
-// README's other double-quoted strings ("name", "dark", "1.0.0",
-// "your-github-username") have a letters-dot-letters shape, so this stays
-// safe from false positives while still catching out-of-namespace keys.
+// exactly the class of drift this check exists to catch.
+//
+// What the pattern does require is the rest of a colour entry: a colon and a
+// hex value. A quoted dotted identifier on its own is not enough, because
+// plenty of prose has that shape - a sentence mentioning "index.json" or
+// "build-index.mjs" outside the generated block used to fail CI claiming
+// index.json was a colour key missing from the contract. Anchoring to the
+// entry form keeps out-of-namespace keys caught while leaving the rest of
+// the README free to mention filenames.
 const outside = readme.slice(0, s) + readme.slice(e + end.length);
-const KEY_RE = /"([A-Za-z][A-Za-z0-9]*\.[A-Za-z][A-Za-z0-9]*)"/g;
+const KEY_RE = /"([A-Za-z][A-Za-z0-9]*\.[A-Za-z][A-Za-z0-9]*)"\s*:\s*"#[0-9a-fA-F]{3,8}"/g;
 const foundKeys = new Set();
 for (const match of outside.matchAll(KEY_RE)) {
   foundKeys.add(match[1]);
