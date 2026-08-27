@@ -1,16 +1,18 @@
 name: Build index.json
 
+# No path filter. This job validates themes, the README key table and the
+# contract-driven required-colour list, so the set of files it guards is
+# effectively the whole repo - and the filter it replaced listed only
+# themes/** and build-index.mjs. A PR from sync-contract.mjs touches
+# theme-contract.json and README.md and nothing else, which is precisely the
+# PR the staleness check exists for, and it triggered no CI at all. The
+# staleness then survived until some unrelated theme submission arrived and
+# that contributor's PR went red for a change they did not make. A filter
+# that fails by running nothing is not worth a few seconds of Node.
 on:
   push:
     branches: [main]
-    paths:
-      - "themes/**"
-      - "scripts/build-index.mjs"
-      - ".github/workflows/build-index.yml"
   pull_request:
-    paths:
-      - "themes/**"
-      - "scripts/build-index.mjs"
 
 jobs:
   validate:
