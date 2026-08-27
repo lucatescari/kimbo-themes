@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04T07:52:55.086Z",
+  "generated": "2026-08-27T12:04:17.195Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -126,6 +126,34 @@
         "cursor": "#3c3836"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-light.json"
+    },
+    {
+      "slug": "ichiraku-ramen-light",
+      "name": "Ichiraku Ramen Light",
+      "type": "light",
+      "author": "MiguelSeglias",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#f6efe2",
+        "foreground": "#2a1e17",
+        "accent": "#2a5bb5",
+        "cursor": "#e0741a"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/ichiraku-ramen-light.json"
+    },
+    {
+      "slug": "ichiraku-ramen",
+      "name": "Ichiraku Ramen",
+      "type": "dark",
+      "author": "MiguelSeglias",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#1c1410",
+        "foreground": "#f3e7d3",
+        "accent": "#4585db",
+        "cursor": "#f28c28"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/ichiraku-ramen.json"
     },
     {
       "slug": "lightroot",
