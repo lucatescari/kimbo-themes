@@ -1,0 +1,39 @@
+{
+  "name": "Ichiraku Ramen",
+  "type": "dark",
+  "author": "MiguelSeglias",
+  "version": "1.0.0",
+  "colors": {
+    "terminal.background": "#1c1410",
+    "terminal.foreground": "#f3e7d3",
+    "terminal.cursor": "#f28c28",
+    "terminal.selectionBackground": "#5a3a22",
+
+    "terminal.ansiBlack": "#3b2e26",
+    "terminal.ansiRed": "#e04e44",
+    "terminal.ansiGreen": "#7fb069",
+    "terminal.ansiYellow": "#f28c28",
+    "terminal.ansiBlue": "#4585db",
+    "terminal.ansiMagenta": "#ef8da3",
+    "terminal.ansiCyan": "#57b8b2",
+    "terminal.ansiWhite": "#e6d6bf",
+
+    "terminal.ansiBrightBlack": "#7a6556",
+    "terminal.ansiBrightRed": "#f26a5e",
+    "terminal.ansiBrightGreen": "#a3d48c",
+    "terminal.ansiBrightYellow": "#f7d94c",
+    "terminal.ansiBrightBlue": "#6fa3ec",
+    "terminal.ansiBrightMagenta": "#f7afc0",
+    "terminal.ansiBrightCyan": "#82d3cc",
+    "terminal.ansiBrightWhite": "#fbf5ea",
+
+    "tab.activeBackground": "#1c1410",
+    "tab.inactiveBackground": "#150f0c",
+    "tab.activeForeground": "#f3e7d3",
+    "tab.inactiveForeground": "#8c7565",
+
+    "titleBar.background": "#150f0c",
+    "panel.border": "#3b2e26",
+    "panel.activeBorder": "#f28c28"
+  }
+}

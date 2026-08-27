@@ -1,0 +1,39 @@
+{
+  "name": "Ichiraku Ramen Light",
+  "type": "light",
+  "author": "MiguelSeglias",
+  "version": "1.0.0",
+  "colors": {
+    "terminal.background": "#f6efe2",
+    "terminal.foreground": "#2a1e17",
+    "terminal.cursor": "#e0741a",
+    "terminal.selectionBackground": "#f3d4ad",
+
+    "terminal.ansiBlack": "#4a3a30",
+    "terminal.ansiRed": "#b8312a",
+    "terminal.ansiGreen": "#427335",
+    "terminal.ansiYellow": "#b04d05",
+    "terminal.ansiBlue": "#2a5bb5",
+    "terminal.ansiMagenta": "#b0466a",
+    "terminal.ansiCyan": "#1a736e",
+    "terminal.ansiWhite": "#c9b9a2",
+
+    "terminal.ansiBrightBlack": "#7a6556",
+    "terminal.ansiBrightRed": "#c43d33",
+    "terminal.ansiBrightGreen": "#4b8639",
+    "terminal.ansiBrightYellow": "#946a00",
+    "terminal.ansiBrightBlue": "#3369c6",
+    "terminal.ansiBrightMagenta": "#bf5274",
+    "terminal.ansiBrightCyan": "#23877f",
+    "terminal.ansiBrightWhite": "#e6d9c4",
+
+    "tab.activeBackground": "#f6efe2",
+    "tab.inactiveBackground": "#ebe0cc",
+    "tab.activeForeground": "#2a1e17",
+    "tab.inactiveForeground": "#7f6a5b",
+
+    "titleBar.background": "#ebe0cc",
+    "panel.border": "#d8c9b1",
+    "panel.activeBorder": "#e0741a"
+  }
+}
