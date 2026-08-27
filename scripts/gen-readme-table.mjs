@@ -37,6 +37,10 @@ if (s === -1 || e === -1) {
   console.error(`README.md is missing the ${begin} / ${end} markers.`);
   process.exit(1);
 }
+if (s > e) {
+  console.error(`README.md has ${end} before ${begin}; the markers must appear in that order.`);
+  process.exit(1);
+}
 
 // The README's Schema section hand-lists every colour key too, as example
 // JSON, because it's illustrative and reads better hand-formatted (blank-line
@@ -45,8 +49,19 @@ if (s === -1 || e === -1) {
 // staying in sync would not stop the Schema example drifting silently on its
 // own. Assert the key set outside the generated block still matches the
 // contract exactly, in both directions, and fail loudly naming the offenders.
+//
+// The pattern below is deliberately a general "word.word" shape, not a
+// whitelist of the namespaces the contract happens to use today
+// (terminal/tab/titleBar/panel). A whitelist would only ever flag keys that
+// already look like they belong to a known namespace, so a typo'd prefix, a
+// key copy-pasted from another project, or a wrong-case namespace would
+// silently fail to match and pass through as if nothing were wrong -
+// exactly the class of drift this check exists to catch. None of the
+// README's other double-quoted strings ("name", "dark", "1.0.0",
+// "your-github-username") have a letters-dot-letters shape, so this stays
+// safe from false positives while still catching out-of-namespace keys.
 const outside = readme.slice(0, s) + readme.slice(e + end.length);
-const KEY_RE = /"((?:terminal|tab|titleBar|panel)\.[A-Za-z]+)"/g;
+const KEY_RE = /"([A-Za-z][A-Za-z0-9]*\.[A-Za-z][A-Za-z0-9]*)"/g;
 const foundKeys = new Set();
 for (const match of outside.matchAll(KEY_RE)) {
   foundKeys.add(match[1]);
@@ -66,6 +81,7 @@ if (extraInReadme.length > 0 || missingFromReadme.length > 0) {
   if (missingFromReadme.length > 0) {
     console.error(`  in the contract but missing from README: ${missingFromReadme.join(", ")}`);
   }
+  console.error("  update the Schema example's colour keys to match the contract.");
   process.exit(1);
 }
 
