@@ -163,4 +163,13 @@ test("required colours come from the contract, not a hardcoded list", () => {
   ]);
 });
 
-console.log("\nAll tests passed.");
+// Tests 1-7 run synchronously above; the contract test is registered with
+// node:test and runs after this module finishes evaluating. Logging the
+// summary inline therefore printed "All tests passed." before that test had
+// run, so a failing run read as seven ticks, a success line, and then a TAP
+// "not ok" - CI exited non-zero correctly, but a developer watching the
+// output was told the opposite of the truth. Defer to exit, when the code is
+// known.
+process.on("exit", (code) => {
+  if (code === 0) console.log("\nAll tests passed.");
+});
