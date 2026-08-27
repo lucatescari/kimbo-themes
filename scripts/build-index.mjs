@@ -10,12 +10,21 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const REQUIRED_COLORS = [
-  "terminal.background",
-  "terminal.foreground",
-  "terminal.ansiBlue",
-  "terminal.cursor",
-];
+// Required colours come from theme-contract.json, which is authored in
+// kimbo-terminal and synced here by scripts/sync-contract.mjs. Keeping this
+// list in the contract means the app, this validator and the theme creator
+// site cannot drift apart about what a theme must contain.
+let _required = null;
+export function requiredColors() {
+  if (_required === null) {
+    const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+    const contract = JSON.parse(
+      readFileSync(join(repoRoot, "theme-contract.json"), "utf8"),
+    );
+    _required = contract.keys.filter((k) => k.required).map((k) => k.key);
+  }
+  return _required;
+}
 
 const RAW_URL_BASE =
   "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes";
@@ -48,7 +57,7 @@ function validateTheme(slug, theme) {
   if (!theme.colors || typeof theme.colors !== "object") {
     throw new Error(`${slug}: missing 'colors' object`);
   }
-  for (const key of REQUIRED_COLORS) {
+  for (const key of requiredColors()) {
     if (typeof theme.colors[key] !== "string") {
       throw new Error(`${slug}: missing required color key '${key}'`);
     }

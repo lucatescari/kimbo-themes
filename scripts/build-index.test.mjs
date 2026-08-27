@@ -1,9 +1,13 @@
 // Minimal test runner (no deps). Invoked via `node scripts/build-index.test.mjs`.
 import assert from "node:assert/strict";
+import { test } from "node:test";
 import { mkdtempSync, writeFileSync, readFileSync, rmSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { buildIndex } from "./build-index.mjs";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { buildIndex, requiredColors } from "./build-index.mjs";
+
+const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 function setup() {
   const root = mkdtempSync(join(tmpdir(), "kimbo-themes-test-"));
@@ -137,5 +141,26 @@ const validTheme = (overrides = {}) => ({
     rmSync(root, { recursive: true, force: true });
   }
 }
+
+// The required-colour list used to be hardcoded in build-index.mjs. It is now
+// read from theme-contract.json, so the app, this validator and the creator
+// site cannot disagree about what a theme must contain.
+test("required colours come from the contract, not a hardcoded list", () => {
+  const contract = JSON.parse(
+    readFileSync(join(repoRoot, "theme-contract.json"), "utf8"),
+  );
+  const expected = contract.keys.filter((k) => k.required).map((k) => k.key).sort();
+
+  assert.deepEqual([...requiredColors()].sort(), expected);
+  assert.ok(expected.length > 0, "contract should mark some keys required");
+
+  // The historical four. Widening this set would reject already-merged themes.
+  assert.deepEqual(expected, [
+    "terminal.ansiBlue",
+    "terminal.background",
+    "terminal.cursor",
+    "terminal.foreground",
+  ]);
+});
 
 console.log("\nAll tests passed.");
