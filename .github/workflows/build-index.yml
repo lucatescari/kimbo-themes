@@ -27,6 +27,14 @@ jobs:
           node-version: "20"
       - name: Run tests
         run: node scripts/build-index.test.mjs
+      - name: README key table is up to date
+        run: |
+          node scripts/gen-readme-table.mjs
+          if ! git diff --quiet README.md; then
+            echo "README key table is stale. Run: node scripts/gen-readme-table.mjs"
+            git diff README.md
+            exit 1
+          fi
       - name: Build index (dry run)
         run: |
           node scripts/build-index.mjs

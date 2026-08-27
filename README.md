@@ -66,6 +66,53 @@ Themes are JSON files with five required top-level fields: `name`, `type`, `auth
 | `version` | Free-form; semver recommended. Displayed next to author on the card. |
 | `colors` | Color map. Four keys are **required for the swatch preview**: `terminal.background`, `terminal.foreground`, `terminal.ansiBlue`, `terminal.cursor`. Omitting any of these fails validation. |
 
+### Colour keys
+
+<!-- BEGIN GENERATED KEYS -->
+
+#### Terminal
+
+| Key | Default | Required |
+|---|---|---|
+| `terminal.background` | `#000000` | yes |
+| `terminal.foreground` | `#ffffff` | yes |
+| `terminal.cursor` | `#ffffff` | yes |
+| `terminal.selectionBackground` | `#444444` | no |
+
+#### ANSI colours
+
+| Key | Default | Required |
+|---|---|---|
+| `terminal.ansiBlack` | `#000000` | no |
+| `terminal.ansiRed` | `#cc0000` | no |
+| `terminal.ansiGreen` | `#00cc00` | no |
+| `terminal.ansiYellow` | `#cccc00` | no |
+| `terminal.ansiBlue` | `#0000cc` | yes |
+| `terminal.ansiMagenta` | `#cc00cc` | no |
+| `terminal.ansiCyan` | `#00cccc` | no |
+| `terminal.ansiWhite` | `#cccccc` | no |
+| `terminal.ansiBrightBlack` | `#555555` | no |
+| `terminal.ansiBrightRed` | `#ff0000` | no |
+| `terminal.ansiBrightGreen` | `#00ff00` | no |
+| `terminal.ansiBrightYellow` | `#ffff00` | no |
+| `terminal.ansiBrightBlue` | `#0000ff` | no |
+| `terminal.ansiBrightMagenta` | `#ff00ff` | no |
+| `terminal.ansiBrightCyan` | `#00ffff` | no |
+| `terminal.ansiBrightWhite` | `#ffffff` | no |
+
+#### Window chrome
+
+| Key | Default | Required |
+|---|---|---|
+| `tab.activeBackground` | `#333333` | no |
+| `tab.inactiveBackground` | `#1a1a1a` | no |
+| `tab.activeForeground` | `#ffffff` | no |
+| `tab.inactiveForeground` | `#888888` | no |
+| `titleBar.background` | `#1a1a1a` | no |
+| `panel.border` | `#333333` | no |
+| `panel.activeBorder` | `#0066ff` | no |
+<!-- END GENERATED KEYS -->
+
 ### How to contribute
 
 1. Fork this repo.
