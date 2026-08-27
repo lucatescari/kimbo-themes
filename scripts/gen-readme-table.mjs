@@ -38,6 +38,37 @@ if (s === -1 || e === -1) {
   process.exit(1);
 }
 
+// The README's Schema section hand-lists every colour key too, as example
+// JSON, because it's illustrative and reads better hand-formatted (blank-line
+// grouping) than a generator would produce. Nothing else enforces that this
+// second, hand-written copy agrees with the contract, so this generated block
+// staying in sync would not stop the Schema example drifting silently on its
+// own. Assert the key set outside the generated block still matches the
+// contract exactly, in both directions, and fail loudly naming the offenders.
+const outside = readme.slice(0, s) + readme.slice(e + end.length);
+const KEY_RE = /"((?:terminal|tab|titleBar|panel)\.[A-Za-z]+)"/g;
+const foundKeys = new Set();
+for (const match of outside.matchAll(KEY_RE)) {
+  foundKeys.add(match[1]);
+}
+
+const contractKeys = new Set(contract.keys.map((k) => k.key));
+const extraInReadme = [...foundKeys].filter((k) => !contractKeys.has(k));
+const missingFromReadme = [...contractKeys].filter((k) => !foundKeys.has(k));
+
+if (extraInReadme.length > 0 || missingFromReadme.length > 0) {
+  console.error(
+    "README.md's hand-written colour keys (outside the generated block, e.g. the Schema example) have drifted from theme-contract.json:",
+  );
+  if (extraInReadme.length > 0) {
+    console.error(`  in README but not in the contract: ${extraInReadme.join(", ")}`);
+  }
+  if (missingFromReadme.length > 0) {
+    console.error(`  in the contract but missing from README: ${missingFromReadme.join(", ")}`);
+  }
+  process.exit(1);
+}
+
 const next = readme.slice(0, s + begin.length) + "\n\n" + body + readme.slice(e);
 if (next === readme) {
   console.log("README key table already up to date.");
