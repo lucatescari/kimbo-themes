@@ -26,6 +26,23 @@ export function requiredColors() {
   return _required;
 }
 
+let _defaults = null;
+
+/** Contract defaults by key. The resolver in kimbo-terminal fills an omitted
+ *  key with its contract default, so anything derived here for a theme that
+ *  did not declare a key must use the same value — otherwise a card advertises
+ *  a colour the installed theme does not paint. */
+export function contractDefault(key) {
+  if (_defaults === null) {
+    const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+    const contract = JSON.parse(
+      readFileSync(join(repoRoot, "theme-contract.json"), "utf8"),
+    );
+    _defaults = Object.fromEntries(contract.keys.map((k) => [k.key, k.default]));
+  }
+  return _defaults[key];
+}
+
 const RAW_URL_BASE =
   "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes";
 
@@ -87,7 +104,10 @@ export function buildIndex(repoRoot) {
       swatches: {
         background: theme.colors["terminal.background"],
         foreground: theme.colors["terminal.foreground"],
-        accent: theme.colors["terminal.ansiBlue"],
+        // The app's chrome accent and settings cards follow
+        // panel.activeBorder; a theme that declares none resolves to the
+        // contract default, exactly as kimbo-config's resolver does.
+        accent: theme.colors["panel.activeBorder"] ?? contractDefault("panel.activeBorder"),
         cursor: theme.colors["terminal.cursor"],
       },
       download_url: `${RAW_URL_BASE}/${slug}.json`,
