@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-27T13:43:41.476Z",
+  "generated": "2026-09-01T07:19:21.840Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -38,7 +38,7 @@
       "swatches": {
         "background": "#111111",
         "foreground": "#e8e6dc",
-        "accent": "#6a9bcc",
+        "accent": "#d97757",
         "cursor": "#d97757"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/claude-red.json"
@@ -66,7 +66,7 @@
       "swatches": {
         "background": "#08080f",
         "foreground": "#c0c4cc",
-        "accent": "#2e4464",
+        "accent": "#e8b830",
         "cursor": "#e8b830"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/edict.json"
@@ -80,7 +80,7 @@
       "swatches": {
         "background": "#0e1a14",
         "foreground": "#c8d4c0",
-        "accent": "#5fb39a",
+        "accent": "#7fdca4",
         "cursor": "#7fdca4"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/forest.json"
@@ -108,7 +108,7 @@
       "swatches": {
         "background": "#282828",
         "foreground": "#ebdbb2",
-        "accent": "#458588",
+        "accent": "#fabd2f",
         "cursor": "#ebdbb2"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-dark.json"
@@ -122,7 +122,7 @@
       "swatches": {
         "background": "#fbf1c7",
         "foreground": "#3c3836",
-        "accent": "#458588",
+        "accent": "#076678",
         "cursor": "#3c3836"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/gruvbox-light.json"
@@ -136,7 +136,7 @@
       "swatches": {
         "background": "#f6efe2",
         "foreground": "#2a1e17",
-        "accent": "#2a5bb5",
+        "accent": "#e0741a",
         "cursor": "#e0741a"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/ichiraku-ramen-light.json"
@@ -150,7 +150,7 @@
       "swatches": {
         "background": "#1c1410",
         "foreground": "#f3e7d3",
-        "accent": "#4585db",
+        "accent": "#f28c28",
         "cursor": "#f28c28"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/ichiraku-ramen.json"
@@ -164,7 +164,7 @@
       "swatches": {
         "background": "#222222",
         "foreground": "#cccccc",
-        "accent": "#faf7dc",
+        "accent": "#49d59c",
         "cursor": "#ffffff"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/lightroot.json"
@@ -178,7 +178,7 @@
       "swatches": {
         "background": "#000800",
         "foreground": "#00cc33",
-        "accent": "#00b88a",
+        "accent": "#00ff41",
         "cursor": "#00ff41"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/matrix.json"
@@ -206,7 +206,7 @@
       "swatches": {
         "background": "#2e3440",
         "foreground": "#d8dee9",
-        "accent": "#81a1c1",
+        "accent": "#88c0d0",
         "cursor": "#d8dee9"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/nord.json"
@@ -220,7 +220,7 @@
       "swatches": {
         "background": "#1a0a1a",
         "foreground": "#ffc0e0",
-        "accent": "#ff5caa",
+        "accent": "#ff00ff",
         "cursor": "#ff69b4"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/princess.json"
@@ -248,7 +248,7 @@
       "swatches": {
         "background": "#191724",
         "foreground": "#e0def4",
-        "accent": "#9ccfd8",
+        "accent": "#c4a7e7",
         "cursor": "#e0def4"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/rose-pine.json"

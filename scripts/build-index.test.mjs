@@ -40,9 +40,13 @@ const validTheme = (overrides = {}) => ({
   try {
     writeTheme(root, "alpha", validTheme({ name: "Alpha" }));
     writeTheme(root, "beta", validTheme({ name: "Beta", type: "light" }));
+    // A theme that declares its accent: the index must carry it, because the
+    // app's chrome accent and settings cards follow panel.activeBorder.
+    const gammaColors = { ...validTheme().colors, "panel.activeBorder": "#d97757" };
+    writeTheme(root, "gamma", validTheme({ name: "Gamma", colors: gammaColors }));
 
     const result = buildIndex(root);
-    assert.equal(result.themes.length, 2);
+    assert.equal(result.themes.length, 3);
     assert.ok(result.generated, "should have a generated timestamp");
     const alpha = result.themes.find((t) => t.slug === "alpha");
     assert.equal(alpha.name, "Alpha");
@@ -51,12 +55,18 @@ const validTheme = (overrides = {}) => ({
     assert.equal(alpha.version, "1.0.0");
     assert.equal(alpha.swatches.background, "#000000");
     assert.equal(alpha.swatches.foreground, "#ffffff");
-    assert.equal(alpha.swatches.accent, "#0000ff");
+    // alpha declares no panel.activeBorder, so it must fall back to that
+    // key's contract default — the same value the Rust resolver gives an
+    // installed theme — NOT to its ANSI blue #0000ff.
+    assert.equal(alpha.swatches.accent, "#0066ff");
     assert.equal(alpha.swatches.cursor, "#ff00ff");
     assert.equal(
       alpha.download_url,
       "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/alpha.json"
     );
+    const gamma = result.themes.find((t) => t.slug === "gamma");
+    // A declared accent wins; alpha above proves the contract-default fallback.
+    assert.equal(gamma.swatches.accent, "#d97757");
     console.log("✓ test 1: valid themes produce a valid index");
   } finally {
     rmSync(root, { recursive: true, force: true });
