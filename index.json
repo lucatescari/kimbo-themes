@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T08:34:06.060Z",
+  "generated": "2026-09-30T15:02:24.487Z",
   "themes": [
     {
       "slug": "catppuccin-latte",
@@ -154,6 +154,20 @@
         "cursor": "#f28c28"
       },
       "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/ichiraku-ramen.json"
+    },
+    {
+      "slug": "jack-o-lantern",
+      "name": "Jack-o'-Lantern",
+      "type": "dark",
+      "author": "OblivionLS",
+      "version": "1.0.0",
+      "swatches": {
+        "background": "#1a1025",
+        "foreground": "#f5e6d8",
+        "accent": "#ff7518",
+        "cursor": "#ff7518"
+      },
+      "download_url": "https://raw.githubusercontent.com/lucatescari/kimbo-themes/main/themes/jack-o-lantern.json"
     },
     {
       "slug": "lightroot",
