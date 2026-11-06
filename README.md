@@ -6,7 +6,7 @@ Kimbo ships with two built-in themes (`Kimbo Dark` and `Kimbo Light`). Everythin
 
 ## Installing Themes
 
-Open Kimbo Terminal, go to **Settings** (Cmd+,) > **Appearance**. Every theme appears under `Yours` (ready to use) or `Available` (click to install). Themes are saved to `~/.config/kimbo/themes/`.
+Open Kimbo Terminal, go to **Settings** (Cmd+,) > **Appearance**. Installed themes appear in the **Theme** section; the rest are in the **Community gallery** (click to install). Themes are saved to `~/Library/Application Support/kimbo/themes/`.
 
 ## Creating a Theme
 
@@ -136,8 +136,10 @@ suggests:
 
 ### Test locally
 
+In Kimbo: Settings > Appearance > **Import from file**, then pick your JSON. Or copy it in by hand:
+
 ```bash
-cp themes/your-theme.json ~/.config/kimbo/themes/
+cp themes/your-theme.json ~/Library/Application\ Support/kimbo/themes/
 ```
 
-Open Settings > Appearance and select it.
+Then open Settings > Appearance and select it.
